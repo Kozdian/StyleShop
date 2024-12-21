@@ -1,0 +1,66 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: v.$negro;
+    color: v.$blanco;
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+    @include m.tablet {height: 100%;}
+    
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {text-decoration: none;}
+
+img {max-width: 100%;}
+
+
+/* Utilities */
+
+.container-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include m.tablet {flex-direction: row;}
+    &-left {justify-content: flex-start;}
+    &-right {justify-content: flex-end;}
+    &-space {justify-content:space-between;}
+}
+
+
+
+.txt-center {text-align:center;}
+
+.blue {color: v.$azul;}
+
+.no-margin {margin: 0;}
+
+.no-border {border: none;}
+
+.swal-title-large {font-size: 2.8rem;}
+.swal-button-large {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+
